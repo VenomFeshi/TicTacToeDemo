@@ -1,20 +1,4 @@
-def enter_move():
-    if(input("Input whatever you want player 1: ") == "a"):
-        print("player 1")
-        return True
+board = [["x","o","x"],["x","x","o"],["o","","x"]] #Game inizialize with an x in the position 11
 
-def draw_move():
-    if(input("Input whatever you want player 2: ") == "b"):
-        print("player 2")
-        return True
-
-bucle = False
-currently_turn = 0
-
-while not (bucle):
-    if currently_turn == 0:
-        bucle = enter_move()
-        currently_turn = 1
-    elif currently_turn == 1:
-        bucle = draw_move()
-        currently_turn = 0
+if ("" not in board[0] and "" not in board[1] and "" not in board[2]):
+    print('is a draw game')
